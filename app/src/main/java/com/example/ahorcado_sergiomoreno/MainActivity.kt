@@ -21,27 +21,21 @@ class MainActivity : AppCompatActivity() {
     var imagenID = 0;
     var errores = 0
     val palabras = arrayOf(
-        "C,A,S,A,S",
-        "P,E,R,R,O",
-        "G,A,T,O,S",
-        "J,U,E,G,O",
-        "S,A,L,O,N",
-        "P,L,A,Y,A",
-        "T,E,C,L,A",
-        "R,E,D,E,S",
-        "C,L,A,S,E",
-        "L,I,B,R,O",
-        "C,O,D,I,G",
-        "A,H,O,R,C",
-        "N,U,B,E,S",
-        "P,I,E,D,A",
-        "V,I,D,E,O",
-        "M,O,U,S,E",
-        "P,I,X,E,L",
-        "S,O,N,I,D",
+        "A,R,B,O,L",
+        "C,A,M,P,O",
+        "S,U,E,L,O",
+        "H,O,G,A,R",
+        "M,U,N,D,O",
         "F,O,R,M,A",
-        "L,O,G,I,C"
+        "N,O,C,H,E",
+        "C,R,E,M,A",
+        "R,I,E,G,O",
+        "B,R,A,Z,O",
+        "T,R,A,J,E",
+        "C,A,L,O,R",
+        "C,O,L,O,R"
     )
+
 
     val palabraLetras = (palabras[Random.nextInt(palabras.size)].split(","))
 
