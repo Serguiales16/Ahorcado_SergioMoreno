@@ -11,6 +11,107 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
+    fun verificar() {
+
+        val letraSeleccionada = binding.letra.text.toString().uppercase()
+
+
+        if (letraSeleccionada.equals(binding.letra1.text.toString())) {
+
+            binding.letra1.visibility = View.VISIBLE
+        } else {
+            errores++
+        }
+
+        if (letraSeleccionada.equals(binding.letra2.text.toString())) {
+
+            binding.letra2.visibility = View.VISIBLE
+
+        } else {
+
+            errores++
+
+        }
+
+        if (letraSeleccionada.equals(binding.letra3.text.toString())) {
+
+            binding.letra3.visibility = View.VISIBLE
+
+        } else {
+
+            errores++
+
+        }
+
+        if (letraSeleccionada.equals(binding.letra4.text.toString())) {
+
+            binding.letra4.visibility = View.VISIBLE
+
+        } else {
+
+            errores++
+
+        }
+
+        if (letraSeleccionada.equals(binding.letra5.text.toString())) {
+
+            binding.letra5.visibility = View.VISIBLE
+
+        } else {
+
+            errores++
+
+        }
+
+    }
+
+    var errores = 0
+    val palabras = arrayOf(
+        "C,A,S,A,S",
+        "P,E,R,R,O",
+        "G,A,T,O,S",
+        "J,U,E,G,O",
+        "S,A,L,O,N",
+        "P,L,A,Y,A",
+        "T,E,C,L,A",
+        "R,E,D,E,S",
+        "C,L,A,S,E",
+        "L,I,B,R,O",
+        "C,O,D,I,G",
+        "A,H,O,R,C",
+        "N,U,B,E,S",
+        "P,I,E,D,A",
+        "V,I,D,E,O",
+        "M,O,U,S,E",
+        "P,I,X,E,L",
+        "S,O,N,I,D",
+        "F,O,R,M,A",
+        "L,O,G,I,C"
+    )
+
+    val palabraLetras = (palabras[Random.nextInt(palabras.size)].split(","))
+
+    fun asignacion() {
+
+
+
+
+        //   var palabraLetras = arrayOf(palabras[Random.nextInt(palabras.size)].split(","))
+
+        binding.letra1.visibility = View.INVISIBLE
+        binding.letra2.visibility = View.INVISIBLE
+        binding.letra3.visibility = View.INVISIBLE
+        binding.letra4.visibility = View.INVISIBLE
+        binding.letra5.visibility = View.INVISIBLE
+
+        binding.letra1.text = palabraLetras[0].toString()
+        binding.letra2.text = palabraLetras[1].toString()
+        binding.letra3.text = palabraLetras[2].toString()
+        binding.letra4.text = palabraLetras[3].toString()
+        binding.letra5.text = palabraLetras[4].toString()
+
+    }
+
     lateinit var binding: ActivityMainBinding
 
 
@@ -27,58 +128,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        fun asignacion() {
-
-            val palabras = arrayOf(
-                "C,A,S,A,S",
-                "P,E,R,R,O",
-                "G,A,T,O,S",
-                "J,U,E,G,O",
-                "S,A,L,O,N",
-                "P,L,A,Y,A",
-                "T,E,C,L,A",
-                "R,E,D,E,S",
-                "C,L,A,S,E",
-                "L,I,B,R,O",
-                "C,O,D,I,G",
-                "A,H,O,R,C",
-                "N,U,B,E,S",
-                "P,I,E,D,A",
-                "V,I,D,E,O",
-                "M,O,U,S,E",
-                "P,I,X,E,L",
-                "S,O,N,I,D",
-                "F,O,R,M,A",
-                "L,O,G,I,C"
-            )
-
-            val palabraLetras = (palabras[Random.nextInt(palabras.size)].split(","))
 
 
-            //   var palabraLetras = arrayOf(palabras[Random.nextInt(palabras.size)].split(","))
+        binding.reset.setOnClickListener {
 
-            binding.letra1.visibility = View.INVISIBLE
-            binding.letra2.visibility = View.INVISIBLE
-            binding.letra3.visibility = View.INVISIBLE
-            binding.letra4.visibility = View.INVISIBLE
-            binding.letra5.visibility = View.INVISIBLE
-
-            binding.letra1.text = palabraLetras[0].toString()
-            binding.letra2.text = palabraLetras[1].toString()
-            binding.letra3.text = palabraLetras[2].toString()
-            binding.letra4.text = palabraLetras[3].toString()
-            binding.letra5.text = palabraLetras[4].toString()
+            asignacion()
 
         }
 
 
-
         binding.enviar.setOnClickListener {
 
-            var letraSeleccionada = binding.letra.text.toString().uppercase()
-
-
-
+            verificar()
 
         }
 
