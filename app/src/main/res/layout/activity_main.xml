@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D5000000"
     tools:context=".MainActivity">
 
     <Button
@@ -16,7 +17,7 @@
         android:backgroundTint="#8D26B2"
         android:text="Enviar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/error" />
 
     <EditText
         android:id="@+id/letra"
@@ -24,22 +25,24 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
+        android:backgroundTint="#7A2291"
         android:ems="10"
         android:hint="Letra"
         android:inputType="text"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/error" />
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/error"
         android:layout_width="210dp"
         android:layout_height="63dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        android:text="Bienvenido a la Horca de Sergio jajaj"
+        android:text="Errores: "
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#9E3434"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +56,7 @@
         android:layout_marginTop="29dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="479dp"
+        android:backgroundTint="#C27F7F"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,11 +140,12 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="40dp"
-        android:text="Reset"
+        android:backgroundTint="#17C4C4"
+        android:text="Empezar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
