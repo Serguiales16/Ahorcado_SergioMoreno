@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -21,15 +21,15 @@
     <EditText
         android:id="@+id/letra"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Letra"
         android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
     <TextView
         android:id="@+id/titulo"
@@ -52,12 +52,14 @@
         android:layout_width="407dp"
         android:layout_height="88dp"
         android:layout_marginStart="2dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="479dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letra">
 
         <TextView
             android:id="@+id/letra1"
@@ -132,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/tori_cabeza_foreground" />
+        app:srcCompat="@drawable/puertatori" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
