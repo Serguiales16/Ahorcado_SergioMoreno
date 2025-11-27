@@ -12,6 +12,10 @@ import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
 
+    val imagen = arrayOf(R.mipmap.tori_cabeza_foreground, R.mipmap.tori_torso_foreground, R.mipmap.tori_brazos_foreground,
+        R.mipmap.tori_piernas_foreground, R.mipmap.tori_enemigo_foreground, R.mipmap.tori_muerte_foreground)
+
+    var imagenID = 0;
     var errores = 0
     val palabras = arrayOf(
         "C,A,S,A,S",
@@ -41,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     fun verificar() {
 
         errores = 0
+
+
 
         val letraSeleccionada = binding.letra.text.toString().uppercase()
 
@@ -94,8 +100,10 @@ class MainActivity : AppCompatActivity() {
 
         if (errores > 4) {
 
-            binding.error.append("$letraSeleccionada - ")
+            imagenID++
 
+            binding.error.append("$letraSeleccionada - ")
+            binding.horca.setImageResource(imagen[imagenID])
         }
 
     }
@@ -104,6 +112,7 @@ class MainActivity : AppCompatActivity() {
 
     fun asignacion() {
 
+        imagenID = 0
         errores = 0
         binding.error.text = "Errores: "
 
@@ -136,6 +145,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        binding.horca.setImageResource(imagen[0])
 
 
 

@@ -140,7 +140,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/puertatori" />
+        app:srcCompat="@mipmap/tori_cabeza_foreground" />
 
     <Button
         android:id="@+id/reset"
