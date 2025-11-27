@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     )
 
 
-    val palabraLetras = (palabras[Random.nextInt(palabras.size)].split(","))
+    var palabraLetras = (palabras[Random.nextInt(palabras.size)].split(","))
 
     fun verificar() {
 
@@ -109,6 +109,7 @@ class MainActivity : AppCompatActivity() {
 
     fun asignacion() {
 
+        palabraLetras = (palabras[Random.nextInt(palabras.size)].split(","))
         imagenID = 0
         errores = 0
         binding.error.text = "Errores: "
