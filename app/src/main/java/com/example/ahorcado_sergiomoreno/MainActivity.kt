@@ -153,6 +153,7 @@ class MainActivity : AppCompatActivity() {
         binding.reset.setOnClickListener {
 
             asignacion()
+            binding.horca.setImageResource(imagen[0])
 
         }
 

@@ -21,18 +21,20 @@
 
     <EditText
         android:id="@+id/letra"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="216dp"
+        android:layout_height="51dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
-        android:backgroundTint="#7A2291"
+        android:background="@color/white"
+        android:backgroundTint="@color/black"
         android:backgroundTintMode="add"
         android:ems="10"
         android:foregroundTint="#AC2222"
-        android:hint="LETRA"
+        android:hint="Escribir Aqui"
         android:inputType="text"
         android:textAlignment="center"
-        android:textColor="#EDE8E8"
+        android:textColor="#020202"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/error" />
@@ -140,17 +142,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@mipmap/tori_cabeza_foreground" />
 
     <Button
         android:id="@+id/reset"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="139dp"
-        android:layout_height="56dp"
+        android:layout_width="136dp"
+        android:layout_height="68dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#17C4C4"
-        android:text="Empezar"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#0DD0BA"
+        android:text="EMPEZAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
